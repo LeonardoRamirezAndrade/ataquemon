@@ -23,7 +23,18 @@ function selectPlayerPet() {
      OponnetPet()
 }
 
-function OponnetPet()
+function OponnetPet(){
+    let randomAttack = random(1, 3)
+    let spanOponnetPet = document.getElementById('opponents-pet')
+
+    if (randomAttack == 1) {
+        spanOponnetPet.innerHTML = " Shirov "
+    }   else if (randomAttack == 2) {
+            spanOponnetPet.innerHTML = " Karpov "
+        }   else {
+                spanOponnetPet.innerHTML = " Anand "
+        }
+}
 
 window.addEventListener('load', startGame)
 
