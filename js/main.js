@@ -1,21 +1,31 @@
+
+let playerAttack
+let oponnetAttack 
+
 function startGame() {
     let buttonPetsPlayer = document.getElementById('button-pets')
     buttonPetsPlayer.addEventListener('click', selectPlayerPet)   
+    let buttonFire =document.getElementById('button-fire')
+    buttonFire.addEventListener('click', fireAttack)
+    let buttonWater =document.getElementById('button-water')
+    buttonWater.addEventListener('click', waterAttack)
+    let buttonGround =document.getElementById('button-ground')
+    buttonGround.addEventListener('click', groundAttack)
 }
 
 function selectPlayerPet() {
-    let inputShirov = document.getElementById('Shirov')
-    let inputKarpov = document.getElementById('Karpov')
-    let inputAnand = document.getElementById('Anand')
-    let spanPlayerPet = document.getElementById('players-pet')
+    let inputShirov =document.getElementById('Shirov')
+    let inputKarpov =document.getElementById('Karpov')
+    let inputAnand =document.getElementById('Anand')
+    let spanPlayersPet =document.getElementById('players-pet')
 
 
     if (inputShirov.checked) {
-        spanPlayerPet.innerHTML = " Shirov "
+        spanPlayersPet.innerHTML = " Shirov "
     }  else if (inputKarpov.checked) {
-        spanPlayerPet.innerHTML = " Karpov "
+        spanPlayersPet.innerHTML = " Karpov "
     }  else if (inputAnand.checked) {
-        spanPlayerPet.innerHTML = " Anand "
+        spanPlayersPet.innerHTML = " Anand "
     }
      else {
         alert('Tienes que seleccionar alguna mascota')
@@ -33,6 +43,32 @@ function OponnetPet(){
             spanOponnetPet.innerHTML = " Karpov "
         }   else {
                 spanOponnetPet.innerHTML = " Anand "
+        }
+}
+
+function fireAttack() {
+    playerAttack = 'fire'
+    randomAttackOpponent()
+}
+function waterAttack() {
+    playerAttack = 'water'
+    randomAttackOpponent()
+}
+function groundAttack() {
+    playerAttack = 'ground'
+    randomAttackOpponent()
+}
+
+
+
+function randomAttackOpponent() {
+    let randomAttack = random(1, 3)
+    if (randomAttack == 1) {
+        oponnetAttack = 'fire'
+    }   else if (randomAttack == 2) {
+            oponnetAttack = 'water'
+        }   else {
+                oponnetAttack = 'ground'
         }
 }
 
