@@ -50,16 +50,23 @@ function fireAttack() {
     playerAttack = 'fire'
     randomAttackOpponent()
 }
+
 function waterAttack() {
     playerAttack = 'water'
     randomAttackOpponent()
 }
+
 function groundAttack() {
     playerAttack = 'ground'
     randomAttackOpponent()
 }
 
-
+function createMessage() {
+    let sectionMessage = document.getElementById('message')
+    let message = document.createElement('p')
+    message.innerHTML = `your pet attacked with ${playerAttack} & opponet's pet attacked with ${oponnetAttack}`
+    sectionMessage.appendChild(message)
+}
 
 function randomAttackOpponent() {
     let randomAttack = random(1, 3)
@@ -70,6 +77,7 @@ function randomAttackOpponent() {
         }   else {
                 oponnetAttack = 'ground'
         }
+    createMessage()     
 }
 
 window.addEventListener('load', startGame)
