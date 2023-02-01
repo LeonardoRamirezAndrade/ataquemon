@@ -64,8 +64,10 @@ function groundAttack() {
 function createMessage() {
     let sectionMessage = document.getElementById('message')
     let message = document.createElement('p')
-    message.innerHTML = `your pet attacked with ${playerAttack} & opponet's pet attacked with ${oponnetAttack}`
+    message.innerHTML = `your pet attacked with ${playerAttack} & opponet's pet attacked with ${oponnetAttack} ${combat()}` 
+ 
     sectionMessage.appendChild(message)
+
 }
 
 function randomAttackOpponent() {
@@ -78,6 +80,25 @@ function randomAttackOpponent() {
                 oponnetAttack = 'ground'
         }
     createMessage()     
+}
+
+function combat() {
+    if (playerAttack == oponnetAttack) {
+        alert('Draw')
+        return 'Draw'
+    }   else if (playerAttack == 'fire' && oponnetAttack == 'ground') {
+            alert('You win')
+            return 'You win'
+            }   else if (playerAttack == 'water' && oponnetAttack == 'fire') {
+                    alert('You win')
+                    return 'You win'
+                    } else if (playerAttack == 'ground' && oponnetAttack == 'water') {
+                        alert('You win')
+                        return 'You win'
+                        } else {
+                            alert('You lose')
+                            return 'You lose'
+                            }
 }
 
 window.addEventListener('load', startGame)
