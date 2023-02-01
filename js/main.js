@@ -84,19 +84,14 @@ function randomAttackOpponent() {
 
 function combat() {
     if (playerAttack == oponnetAttack) {
-        alert('Draw')
         return 'Draw'
     }   else if (playerAttack == 'fire' && oponnetAttack == 'ground') {
-            alert('You win')
             return 'You win'
             }   else if (playerAttack == 'water' && oponnetAttack == 'fire') {
-                    alert('You win')
                     return 'You win'
                     } else if (playerAttack == 'ground' && oponnetAttack == 'water') {
-                        alert('You win')
                         return 'You win'
                         } else {
-                            alert('You lose')
                             return 'You lose'
                             }
 }
