@@ -1,6 +1,7 @@
-
 let playerAttack
 let oponnetAttack 
+let playerLife = 3
+let oponnetLife = 3
 
 function startGame() {
     let buttonPetsPlayer = document.getElementById('button-pets')
@@ -35,14 +36,14 @@ function selectPlayerPet() {
 
 function OponnetPet(){
     let randomAttack = random(1, 3)
-    let spanOponnetPet = document.getElementById('opponents-pet')
+    let spanOponnetsPet = document.getElementById('opponents-pet')
 
     if (randomAttack == 1) {
-        spanOponnetPet.innerHTML = " Shirov "
+        spanOponnetsPet.innerHTML = " Shirov "
     }   else if (randomAttack == 2) {
-            spanOponnetPet.innerHTML = " Karpov "
+            spanOponnetsPet.innerHTML = " Karpov "
         }   else {
-                spanOponnetPet.innerHTML = " Anand "
+                spanOponnetsPet.innerHTML = " Anand "
         }
 }
 
@@ -64,8 +65,7 @@ function groundAttack() {
 function createMessage() {
     let sectionMessage = document.getElementById('message')
     let message = document.createElement('p')
-    message.innerHTML = `your pet attacked with ${playerAttack} & opponet's pet attacked with ${oponnetAttack} ${combat()}` 
- 
+    message.innerHTML = `your pet attacked with ${playerAttack} & opponet's pet attacked with ${oponnetAttack}- The result is:  ${combat()}`  
     sectionMessage.appendChild(message)
 
 }
@@ -83,15 +83,28 @@ function randomAttackOpponent() {
 }
 
 function combat() {
+    let spanOponnetPet = document.getElementById('opponentLife')
+    let spanPlayersPet = document.getElementById('playerLife')
+
     if (playerAttack == oponnetAttack) {
         return 'Draw'
+        
     }   else if (playerAttack == 'fire' && oponnetAttack == 'ground') {
+            oponnetLife--
+            spanOponnetPet.innerHTML = oponnetLife
             return 'You win'
             }   else if (playerAttack == 'water' && oponnetAttack == 'fire') {
+                    oponnetLife--
+                    spanOponnetPet.innerHTML = oponnetLife
                     return 'You win'
+
                     } else if (playerAttack == 'ground' && oponnetAttack == 'water') {
+                        oponnetLife--
+                        spanOponnetPet.innerHTML = oponnetLife
                         return 'You win'
                         } else {
+                            playerLife--
+                            spanPlayersPet.innerHTML = playerLife
                             return 'You lose'
                             }
 }
