@@ -10941,10 +10941,68 @@ textarea.form-control-lg {
   font-size: 62.5%;
 }
 
+:root {
+  --white: #ffffff;
+  --black: #000;
+  --very-light-black: #777777;
+  --very-light-pink: rgb(255, 207, 215);
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --sm: 14px; /*Esos Sm, md y LG son para los textos en un futuro y seran variables que se llaman con var() */
+  --md: 18px;
+  --lg: 20px;
+  --column: flex-direction: column;
+}
+
 .title {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 700;
   color: rgb(0, 0, 0);
+  justify-content: center;
   text-align: center;
   margin: 2rem 0;
+}
+
+#decide-pet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  background-color: var(--very-light-pink);
+}
+
+.input_pet {
+  font-size: 2rem;
+  background-color: aqua;
+  width: 30px;
+  height: 50px;
+  flex-direction: var(--column);
+}
+
+.label_pet {
+  font-size: 3rem;
+  background-color: tomato;
+  width: 310px;
+  height: 50px;
+  flex-direction: var(--column);
+}
+
+#pets-button {
+  font-size: 3rem;
+  border-radius: 50px;
+  background-color: blueviolet;
+  width: 310px;
+  height: 50px;
+  flex-direction: var(--column);
+}
+
+#restart {
+  font-size: 3rem;
+  border-radius: 50px;
+  background-color: blueviolet;
+  width: 310px;
+  height: 50px;
+  flex-direction: var(--column);
 }/*# sourceMappingURL=style.css.map */
