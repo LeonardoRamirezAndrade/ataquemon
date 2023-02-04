@@ -10942,7 +10942,8 @@ textarea.form-control-lg {
 }
 
 .body {
-  background-color: var(--very-light-pink);
+  background-color: #84be97;
+  height: 100vh;
 }
 
 :root {
@@ -10961,7 +10962,7 @@ textarea.form-control-lg {
 .title {
   font-size: 6rem;
   font-weight: 700;
-  color: rgb(0, 0, 0);
+  color: #03001C;
   justify-content: center;
   text-align: center;
   margin: 2rem 0;
@@ -10969,7 +10970,7 @@ textarea.form-control-lg {
 
 #decide-pet {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   width: 100%;
@@ -10978,7 +10979,6 @@ textarea.form-control-lg {
 
 .input_pet {
   font-size: 2rem;
-  background-color: aqua;
   width: 30px;
   height: 50px;
   flex-direction: var(--column);
@@ -10987,6 +10987,7 @@ textarea.form-control-lg {
 
 .label_pet {
   font-size: 3rem;
+  color: #5B8FB9;
   background-color: tomato;
   width: 310px;
   height: 50px;
@@ -11009,4 +11010,9 @@ textarea.form-control-lg {
   width: 310px;
   height: 50px;
   flex-direction: var(--column);
+}
+
+.decide-move {
+  display: flex;
+  align-content: flex-start;
 }/*# sourceMappingURL=style.css.map */

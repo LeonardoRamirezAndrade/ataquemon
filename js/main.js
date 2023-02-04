@@ -47,7 +47,8 @@ function selectPlayerPet() {
         spanPlayersPet.innerHTML = " Anand "
     }
      else {
-        alert('Tienes que seleccionar alguna mascota')
+        alert('You have to select a pet')
+        location.reload()
      }
      OponnetPet()
 }
