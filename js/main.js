@@ -84,7 +84,7 @@ function groundAttack() {
 function createMessage() {
     let sectionMessage = document.getElementById('message')
     let message = document.createElement('p')
-    message.innerHTML = `your pet attacked with ${playerAttack} & opponet's pet attacked with ${oponnetAttack}- The result is:  ${combat()}`  
+    message.innerHTML = `your fighter attacked with ${playerAttack} & opponet's fighter attacked with ${oponnetAttack}- The result is:  ${combat()}`  
     sectionMessage.appendChild(message)
 
 }
